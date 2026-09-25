@@ -3,7 +3,7 @@
  * PROJECT      : Paradise Member
  * MODULE       : Public Registration Page (Frontend - GitHub)
  * FILE         : index.html
- * VERSION      : v1.0.0
+ * VERSION      : v1.1.0
  * AUTHOR       : Jimmy
  * CREATED      : 2026-09-25
  * LAST UPDATE  : 2026-09-25
@@ -23,6 +23,10 @@
  * v1.0.0
  * - Initial Release. Migrasi dari template Apps Script (Index.html
  *   lama) menjadi HTML statis murni untuk dihosting di GitHub.
+ *
+ * v1.1.0
+ * - Menambahkan teks bantuan pada kolom Nomor HP: nomor otomatis
+ *   dikonversi ke format 62xxx saat pindah kolom (lihat js/app.js).
  *
  ******************************************************************/
 
@@ -60,6 +64,7 @@
 
         <label for="noHp">Nomor HP</label>
         <input type="tel" id="noHp" name="noHp" placeholder="08xxxxxxxxxx" required>
+        <p class="field-hint">Otomatis diubah menjadi format 62xxx untuk WhatsApp.</p>
 
         <label for="alamat">Alamat</label>
         <textarea id="alamat" name="alamat" placeholder="Alamat lengkap" required></textarea>
