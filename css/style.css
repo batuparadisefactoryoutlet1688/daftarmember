@@ -2,7 +2,7 @@
  * PROJECT      : Paradise Member
  * MODULE       : Public Registration Page (Frontend - GitHub)
  * FILE         : css/style.css
- * VERSION      : v1.0.0
+ * VERSION      : v1.1.0
  * AUTHOR       : Jimmy
  * CREATED      : 2026-09-25
  * LAST UPDATE  : 2026-09-25
@@ -21,6 +21,10 @@
  * v1.0.0
  * - Initial Release. Dipindah dari Css.html (Apps Script) menjadi
  *   file CSS murni untuk dihosting di GitHub.
+ *
+ * v1.1.0
+ * - Menambahkan style .field-hint untuk teks bantuan di bawah
+ *   kolom Nomor HP.
  *
  ******************************************************************/
 
@@ -116,6 +120,12 @@ textarea {
 textarea {
   min-height: 70px;
   resize: vertical;
+}
+
+.field-hint {
+  margin: 4px 0 0 0;
+  font-size: 11px;
+  color: var(--color-muted);
 }
 
 .radio-group {
