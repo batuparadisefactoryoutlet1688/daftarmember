@@ -1,0 +1,103 @@
+<!--
+/******************************************************************
+ * PROJECT      : Paradise Member
+ * MODULE       : Public Registration Page (Frontend - GitHub)
+ * FILE         : index.html
+ * VERSION      : v1.0.0
+ * AUTHOR       : Jimmy
+ * CREATED      : 2026-09-25
+ * LAST UPDATE  : 2026-09-25
+ *
+ * DESCRIPTION
+ * ----------------------------------------------------------------
+ * Halaman pendaftaran member publik (mobile-first). Frontend murni
+ * (HTML/CSS/JS terpisah, dihosting di GitHub), tidak lagi dilayani
+ * oleh Apps Script. Data dikirim ke Apps Script Web App (API JSON)
+ * lewat fetch() di js/app.js.
+ ******************************************************************/
+
+/******************************************************************
+ * VERSION HISTORY
+ * ----------------------------------------------------------------
+ *
+ * v1.0.0
+ * - Initial Release. Migrasi dari template Apps Script (Index.html
+ *   lama) menjadi HTML statis murni untuk dihosting di GitHub.
+ *
+ ******************************************************************/
+
+/******************************************************************
+ * DEPENDENCIES
+ * ----------------------------------------------------------------
+ *
+ * Required
+ * - css/style.css
+ * - js/app.js
+ *
+ ******************************************************************/
+-->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paradise Member</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="page">
+
+    <!-- ============================================================
+         SECTION: FORM PENDAFTARAN
+    ============================================================= -->
+    <div class="card" id="formCard">
+      <h1 class="brand">PARADISE MEMBER</h1>
+      <p class="subtitle">Daftar Member Sekarang</p>
+
+      <form id="registerForm">
+        <label for="namaLengkap">Nama Lengkap</label>
+        <input type="text" id="namaLengkap" name="namaLengkap" placeholder="Nama sesuai KTP" required>
+
+        <label for="noHp">Nomor HP</label>
+        <input type="tel" id="noHp" name="noHp" placeholder="08xxxxxxxxxx" required>
+
+        <label for="alamat">Alamat</label>
+        <textarea id="alamat" name="alamat" placeholder="Alamat lengkap" required></textarea>
+
+        <label for="tanggalLahir">Tanggal Lahir</label>
+        <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+
+        <label>Jenis Kelamin</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="jenisKelamin" value="Laki-laki" required> Laki-laki
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="jenisKelamin" value="Perempuan"> Perempuan
+          </label>
+        </div>
+
+        <input type="hidden" id="branchId" name="branchId" value="">
+
+        <p id="formMessage" class="form-message"></p>
+
+        <button type="submit" id="submitButton">DAFTAR SEKARANG</button>
+      </form>
+    </div>
+
+    <!-- ============================================================
+         SECTION: HALAMAN BERHASIL
+    ============================================================= -->
+    <div class="card hidden" id="successCard">
+      <p class="success-icon">🎉</p>
+      <h2>BERHASIL!</h2>
+      <p>Anda telah terdaftar sebagai Paradise Member</p>
+      <p class="member-id" id="memberIdText"></p>
+      <p class="hint">Simpan Member ID Anda</p>
+    </div>
+
+  </div>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>
